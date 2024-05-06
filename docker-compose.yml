@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+    db:
+        container_name: db_php
+        image: postgres:latest
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: architecture
+        volumes:
+            - ./data/:/var/lib/postgresql/data
