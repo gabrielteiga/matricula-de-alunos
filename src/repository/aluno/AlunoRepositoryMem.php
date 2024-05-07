@@ -10,11 +10,6 @@
     {
         private array $alunos = [];
 
-        public function __construct(array $alunos)
-        {
-            $this->alunos = $alunos;
-        }
-
         public function addAluno(Aluno $aluno): void
         {
             $this->alunos[] = $aluno;

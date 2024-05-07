@@ -13,13 +13,13 @@
         {
             $opcoes = [
                 'options' => [
-                    'regex' => '/\d{3}\.\d{3}\.\d{3}\-\d{2}\/'
+                    'regexp' => '/\d{3}\.\d{3}\.\d{3}\-\d{2}/'
                 ]
             ];
-            if (filter_var($numero, FILTER_VALIDATE_REGEXP, $opcoes) === false){
-                throw new \InvalidArgumentException("CPF inválido");
+            if (filter_var($numero, FILTER_VALIDATE_REGEXP, $opcoes) === false) {
+                throw new \InvalidArgumentException('CPF no formato inválido');
             }
-
+    
             $this->numero = $numero;
         }
 
