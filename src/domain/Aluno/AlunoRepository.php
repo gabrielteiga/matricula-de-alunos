@@ -1,7 +1,7 @@
 <?php
     namespace Gabriel\php\Domain\Aluno;
 
-use Gabriel\php\Domain\Cpf;
+    use Gabriel\php\Domain\Cpf;
 
     interface AlunoRepository 
     {
