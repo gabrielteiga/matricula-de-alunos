@@ -8,8 +8,7 @@
         private Cpf $cpf;
         private string $nome;
         private Email $email;
-        private array $telefones;
-        private string $senha;
+        private array $telefones = [];
 
         public static function comCpfNomeEEmail(string $cpf, string $nome, string $email): self
         {

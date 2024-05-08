@@ -3,5 +3,8 @@
         "psr-4": {
             "Gabriel\\php\\": "src/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.1"
     }
 }
