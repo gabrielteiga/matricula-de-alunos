@@ -5,10 +5,12 @@ services:
         image: mysql:5.7
         restart: always
         environment:
-            MYSQL_PASSWORD: 'root'
-            MYSQL_ROOT_PASSWORD: 'root'
             MYSQL_DATABASE: 'db_php'
+            MYSQL_ROOT_PASSWORD: 'root'
+            MYSQL_USER: 'user'
+            MYSQL_PASSWORD: 'password'
         ports:
             - '3307:3306'
         volumes:
             - ./data/:/var/lib/mysql
+            - ./docker:/docker-entrypoint-initdb.d
