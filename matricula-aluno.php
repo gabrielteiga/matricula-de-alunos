@@ -35,13 +35,14 @@ $dadosAluno = new MatricularAlunoDto(
     $cpf,
     $nome,
     $email,
+    $ddd,
+    $numero
 );
-$usecase->run($dadosAluno);
-$usecase->run($dadosAluno);
 $usecase->run($dadosAluno);
 
 // Imprimindo cada aluno matriculado
 foreach ($repositorio->getAllAlunos() as $aluno)
 {
-    echo "\n".$aluno->getNome()."\n";
+    echo $aluno->getNome()."\n";
+    echo "Quantidade de Telefones: ".count($aluno->getTelefones())."\n\n";
 }

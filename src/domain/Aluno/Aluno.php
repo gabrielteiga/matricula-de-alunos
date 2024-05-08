@@ -22,9 +22,13 @@
             $this->email = $email;
         }
 
-        public function addTelefone(string $ddd, string $numero): self
+        public function addTelefone(string|null $ddd, string|null $numero): self
         {
-            $this->telefones[] = new Telefone($ddd, $numero);
+            if ($ddd !== null && $numero !== null)
+            {
+                $this->telefones[] = new Telefone($ddd, $numero);
+                return $this;
+            }
             return $this;
         }
         

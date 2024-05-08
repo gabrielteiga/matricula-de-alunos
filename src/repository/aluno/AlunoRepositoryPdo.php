@@ -73,7 +73,7 @@
         {
             $sql = 'SELECT cpf, nome, email, ddd, numero
                 FROM alunos
-                JOIN telefones on alunos.cpf = telefones.cpf_aluno';
+                LEFT JOIN telefones on alunos.cpf = telefones.cpf_aluno;';
             
             $stmt = $this->conexao->query( $sql );
             
@@ -89,7 +89,9 @@
                     );
                 }
 
-                $alunos[$dadosAluno['cpf']]->addTelefone($dadosAluno['ddd'], $dadosAluno['numero']);
+                if ($dadosAluno['ddd'] !== null && $dadosAluno['numero'] !== null){
+                    $alunos[$dadosAluno['cpf']]->addTelefone($dadosAluno['ddd'], $dadosAluno['numero']);
+                }
             }
 
             return array_values($alunos);

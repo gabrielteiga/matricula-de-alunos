@@ -16,7 +16,8 @@ use Gabriel\php\Domain\Aluno\IAlunoRepository;
         
         public function run(MatricularAlunoDto $data): void
         {
-            $aluno = Aluno::comCpfNomeEEmail($data->cpfAluno, $data->nomeAluno, $data->emailAluno);
+            $aluno = Aluno::comCpfNomeEEmail($data->cpfAluno, $data->nomeAluno, $data->emailAluno)
+                ->addTelefone($data->ddd, $data->numero);
             $this->alunoRepository->addAluno($aluno);
         }
     }
