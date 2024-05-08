@@ -3,7 +3,7 @@
 
     use Gabriel\php\Domain\Cpf;
 
-    interface AlunoRepository 
+    interface IAlunoRepository 
     {
         public function addAluno(Aluno $aluno): void;
         public function buscarPorCpf(Cpf $cpf): Aluno;

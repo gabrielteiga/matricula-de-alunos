@@ -3,10 +3,10 @@
 
     use Gabriel\php\Domain\Aluno\Aluno;
     use Gabriel\php\Domain\Aluno\AlunoNaoEncontrado;
-    use Gabriel\php\Domain\Aluno\AlunoRepository;
+    use Gabriel\php\Domain\Aluno\IAlunoRepository;
     use Gabriel\php\Domain\Cpf;
 
-    class AlunoRepositoryMem implements AlunoRepository
+    class AlunoRepositoryMem implements IAlunoRepository
     {
         private array $alunos = [];
 

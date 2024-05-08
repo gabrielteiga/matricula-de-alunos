@@ -1,8 +1,8 @@
 <?php
     namespace Gabriel\php\Repository\Aluno;
-    use Gabriel\php\Domain\CifradorDeSenha;
+    use Gabriel\php\Domain\ICifradorDeSenha;
 
-    class CifradorDeSenhaMd5 implements CifradorDeSenha
+    class CifradorDeSenhaMd5 implements ICifradorDeSenha
     {
         public function cifrar(string $senha): string
         {

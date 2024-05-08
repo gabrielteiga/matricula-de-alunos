@@ -3,11 +3,11 @@
 
     use Gabriel\php\Domain\Aluno\Aluno;
     use Gabriel\php\Domain\Aluno\AlunoNaoEncontrado;
-    use Gabriel\php\Domain\Aluno\AlunoRepository;
+    use Gabriel\php\Domain\Aluno\IAlunoRepository;
     use Gabriel\php\Domain\Aluno\Telefone;
     use Gabriel\php\Domain\Cpf;
 
-    class AlunoRepositoryPdo implements AlunoRepository
+    class AlunoRepositoryPdo implements IAlunoRepository
     {
         private \PDO $conexao;
 

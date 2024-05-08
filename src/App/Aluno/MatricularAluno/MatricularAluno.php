@@ -3,13 +3,13 @@
     namespace Gabriel\php\App\Aluno\MatricularAluno;
 
 use Gabriel\php\Domain\Aluno\Aluno;
-use Gabriel\php\Domain\Aluno\AlunoRepository;
+use Gabriel\php\Domain\Aluno\IAlunoRepository;
 
     class MatricularAluno
     {
-        private AlunoRepository $alunoRepository;
+        private IAlunoRepository $alunoRepository;
         
-        public function __construct(AlunoRepository $alunoRepository)
+        public function __construct(IAlunoRepository $alunoRepository)
         {
             $this->alunoRepository = $alunoRepository;
         }

@@ -3,7 +3,7 @@
 
 use Gabriel\php\Domain\Aluno\Aluno;
 
-    interface EnviaEmailIndicacao
+    interface IEnviaEmailIndicacao
     {
         // mail, phpMailer, swiftMailer, ... (bibliotecas que enviam emails)
         public function sendTo(Aluno $indicado): void;
