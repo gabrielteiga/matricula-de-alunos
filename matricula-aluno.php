@@ -43,6 +43,6 @@ $usecase->run($dadosAluno);
 // Imprimindo cada aluno matriculado
 foreach ($repositorio->getAllAlunos() as $aluno)
 {
-    echo $aluno->getNome()."\n";
+    echo 'Aluno: '.$aluno->getNome()."\n";
     echo "Quantidade de Telefones: ".count($aluno->getTelefones())."\n\n";
 }
